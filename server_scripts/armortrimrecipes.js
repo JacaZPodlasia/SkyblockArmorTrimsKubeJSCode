@@ -1,0 +1,50 @@
+ServerEvents.recipes(e => {
+    e.recipes.create.milling('kubejs:stone_dust', 'stone')
+    e.recipes.create.milling('kubejs:endstone_dust', 'end_stone')
+    e.recipes.create.milling('kubejs:purpur_dust', 'purpur_block')
+    e.recipes.create.milling('kubejs:diamond_dust', 'diamond')
+    e.recipes.create.milling('kubejs:zinc_dust', 'create:crushed_raw_zinc')
+    e.recipes.create.milling('kubejs:zinc_dust', 'create:raw_zinc')
+    e.recipes.create.milling('kubejs:blackstone_dust', 'blackstone')
+    e.recipes.create.milling('kubejs:deepslate_dust', 'deepslate')
+    e.recipes.create.milling('kubejs:prismarine_dust', 'prismarine')
+
+
+    e.recipes.create.mixing('kubejs:diamond_zinc_blend', ['kubejs:diamond_dust', 'kubejs:zinc_dust'])
+
+
+    e.recipes.create.compacting('kubejs:overworld_armor_trim_template', '3x kubejs:stone_dust')
+    e.recipes.create.compacting('kubejs:netherrack_armor_trim_template', '3x create:cinder_flour')
+    e.recipes.create.compacting('kubejs:endstone_armor_trim_template', '3x kubejs:endstone_dust')
+    e.recipes.create.compacting('kubejs:purpur_armor_trim_template', '3x kubejs:purpur_dust')
+    e.recipes.create.compacting('kubejs:prismarine_armor_trim_template', '3x kubejs:prismarine_dust')
+    e.recipes.create.pressing('kubejs:terracotta_armor_trim_template', 'terracotta')
+    e.recipes.create.compacting('kubejs:deepslate_armor_trim_template', '3x kubejs:deepslate_dust')
+    e.recipes.create.compacting('kubejs:blackstone_armor_trim_template', '3x kubejs:blackstone_dust')
+    e.recipes.create.pressing('kubejs:sandstone_armor_trim_template', 'sandstone')
+
+
+    e.recipes.create.compacting('sentry_armor_trim_smithing_template', ['kubejs:overworld_armor_trim_template', '2x kubejs:diamond_zinc_blend'])
+    e.recipes.create.compacting('vex_armor_trim_smithing_template', ['kubejs:overworld_armor_trim_template', '4x kubejs:diamond_zinc_blend'])
+    e.recipes.create.compacting('wild_armor_trim_smithing_template', ['kubejs:overworld_armor_trim_template', '3x kubejs:diamond_zinc_blend'])
+    e.recipes.create.compacting('coast_armor_trim_smithing_template', ['kubejs:overworld_armor_trim_template', '1x kubejs:diamond_zinc_blend'])
+    e.recipes.create.compacting('eye_armor_trim_smithing_template', ['kubejs:endstone_armor_trim_template', '4x kubejs:diamond_zinc_blend'])
+    e.recipes.create.compacting('rib_armor_trim_smithing_template', ['kubejs:netherrack_armor_trim_template', '4x kubejs:diamond_zinc_blend'])
+    e.recipes.create.compacting('spire_armor_trim_smithing_template', ['kubejs:purpur_armor_trim_template', '4x kubejs:diamond_zinc_blend'])
+    e.recipes.create.compacting('prismarine_shard', '5x kubejs:tiny_prismarine_shard')
+    e.recipes.create.compacting('wayfinder_armor_trim_smithing_template', ['kubejs:terracotta_armor_trim_template', '1x kubejs:diamond_zinc_blend'])
+    e.recipes.create.compacting('raiser_armor_trim_smithing_template', ['kubejs:terracotta_armor_trim_template', '2x kubejs:diamond_zinc_blend'])
+    e.recipes.create.compacting('shaper_armor_trim_smithing_template', ['kubejs:terracotta_armor_trim_template', '3x kubejs:diamond_zinc_blend'])
+    e.recipes.create.compacting('host_armor_trim_smithing_template', ['kubejs:terracotta_armor_trim_template', '4x kubejs:diamond_zinc_blend'])
+    e.recipes.create.compacting('tide_armor_trim_smithing_template', ['kubejs:prismarine_armor_trim_template', '4x kubejs:diamond_zinc_blend'])
+    e.recipes.create.compacting('ward_armor_trim_smithing_template', ['kubejs:deepslate_armor_trim_template', '4x kubejs:diamond_zinc_blend'])
+    e.recipes.create.compacting('silence_armor_trim_smithing_template', ['kubejs:deepslate_armor_trim_template', '4x kubejs:diamond_zinc_blend', '10x minecraft:sculk'])
+    e.recipes.create.compacting('dune_armor_trim_smithing_template', ['kubejs:sandstone_armor_trim_template', '4x kubejs:diamond_zinc_blend'])
+    e.recipes.create.compacting('snout_armor_trim_smithing_template', ['kubejs:blackstone_armor_trim_template', '4x kubejs:diamond_zinc_blend'])
+
+
+    e.recipes.create.splashing([Item.of('kubejs:diamond_dust').withChance(0.25), Item.of('kubejs:zinc_dust').withChance(0.25)], 'kubejs:diamond_zinc_blend')
+    e.recipes.create.splashing(Item.of('kubejs:tiny_prismarine_shard').withChance(0.1), 'sand')
+    e.recipes.create.splashing(Item.of('kubejs:tiny_prismarine_shard').withChance(0.1), 'gravel')
+    e.recipes.create.splashing(Item.of('sculk').withChance(0.01), 'kubejs:deepslate_dust')
+})  
